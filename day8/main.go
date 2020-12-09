@@ -11,14 +11,14 @@ func main() {
 	part2()
 }
 
-type Inst struct {
+type instruction struct {
 	Op  string
 	Val int
 }
 
 func part1() {
 	lines := aoc.Lines(input)
-	insts := make([]Inst, len(lines))
+	insts := make([]instruction, len(lines))
 	for i, line := range aoc.Lines(input) {
 		fmt.Sscanf(line, "%s %d", &insts[i].Op, &insts[i].Val)
 	}
@@ -46,7 +46,7 @@ func part1() {
 
 func part2() {
 	lines := aoc.Lines(input)
-	insts := make([]Inst, len(lines))
+	insts := make([]instruction, len(lines))
 	for i, line := range aoc.Lines(input) {
 		fmt.Sscanf(line, "%s %d", &insts[i].Op, &insts[i].Val)
 	}
